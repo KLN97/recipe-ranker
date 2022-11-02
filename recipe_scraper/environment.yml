@@ -1,0 +1,14 @@
+name: recipe-scraper
+channels:
+  - defaults
+dependencies:
+  - python=3.9
+  - selenium
+  - beautifulsoup4
+  - spyder-kernels=2.1
+  - python-dotenv
+  - requests
+  - numpy
+  - pandas
+  - matplotlib
+prefix: C:\Users\khila\.conda\envs\recipe-scraper
