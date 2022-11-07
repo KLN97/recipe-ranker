@@ -7,22 +7,21 @@ Created on Thu Jul  7 10:42:47 2022
 
 
 
-#%%
 
-import sys
-import os
-
-SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-sys.path.append(os.path.dirname(SCRIPT_DIR))
-print(SCRIPT_DIR)
 #%%
 from utils.scraper import get_all_recipes
    
-#%%  
 
-recipes=get_all_recipes()
 
-    
 # %%
-recipes
+import pandas as pd
+
+df=pd.DataFrame(get_all_recipes())
+df=df[df.review_nums>10]
+df_num=df[['rating', 'review_nums']]
+# %%
+df_num.plot.scatter('review_nums', 'rating')
+
+# %%
+df_num.groupby('rating').count()
 # %%

@@ -622,13 +622,5 @@ def get_all_recipes(workers=12,urls=False):
 
 
 
-# %%
-import pandas as pd
-
-df=pd.DataFrame(get_all_recipes())
-df=df[df.review_nums>10]
-df_num=df[['rating', 'review_nums']]
-# %%
-df_num.plot.scatter('review_nums', 'rating')
 
 # %%
