@@ -9,7 +9,7 @@ Created on Thu Jul  7 10:42:47 2022
 
 
 #%%
-from utils.scraper import get_all_recipes
+from utils.bbc_food_scraper import get_all_recipes
    
 
 
